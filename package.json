@@ -1,0 +1,33 @@
+{
+  "name": "ovo_game",
+  "version": "1.0.0",
+  "description": "Paper, Scisors, Stone Game",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node node_modules/.bin/webpack-dev-server --content-base dist",
+    "build": "NODE_ENV=production node node_modules/.bin/webpack && cp app/index.html dist/index.html  && cp app/materials.json dist/materials.json",
+    "lint": "jslint app/js/src/**/*.js"
+  },
+  "author": "Edward Hunton",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^3.3.6",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.8.5",
+    "jquery": "^2.2.0",
+    "jslint": "^0.9.6",
+    "resolve-url-loader": "^1.4.3",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.11",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "angular": "^1.4.8",
+    "angular-route": "^1.4.8",
+    "bootstrap": "^3.3.6",
+    "json-loader": "^0.5.4",
+    "ng-cache-loader": "0.0.15"
+  }
+}
