@@ -1,8 +1,8 @@
 {"materials":[
-  {"name": "paper"},
+  {"name": "Paper"},
   {
-    "name": "scisors"},
+    "name": "Scissors"},
   {
-    "name": "stone"}
+    "name": "Rock"}
 ]
 }

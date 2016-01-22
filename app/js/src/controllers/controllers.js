@@ -5,32 +5,32 @@ angular.module('pss_game').controller('MainCtrl', ['$injector', '$http', '$locat
         self.data =  response.data;
     });
     function getWinner(rm, mc) {
-        if (rm === 'paper' && mc === 'stone') {
-            return { 'result': 'Lost', 'description': 'Paper wraps Stone'};
+        if (rm === 'Paper' && mc === 'Rock') {
+            return { 'result': 'lost', 'description': 'Paper wraps Rock'};
         }
-        if (rm === 'stone' && mc === 'paper') {
-            return {'result': 'Won', 'description': 'Paper wraps Stone'};
+        if (rm === 'Rock' && mc === 'Paper') {
+            return {'result': 'won', 'description': 'Paper wraps Rock'};
         }
-        if (rm === 'stone' && mc === 'scisors') {
-            return {'result': 'Lost', 'description': 'Stone blunts Scisors'};
+        if (rm === 'Rock' && mc === 'Scissors') {
+            return {'result': 'lost', 'description': 'Rock blunts Scissors'};
         }
-        if (rm === 'scisors' && mc === 'stone') {
-            return {'result': 'Won', 'description': 'Stone blunts Scisors'};
+        if (rm === 'Scissors' && mc === 'Rock') {
+            return {'result': 'won', 'description': 'Rock blunts Scissors'};
         }
-        if (rm === 'scisors' && mc === 'scisors') {
-            return {'result': 'Drawn', 'description': 'Its a Draw'};
+        if (rm === 'Scissors' && mc === 'Scissors') {
+            return {'result': 'drawn', 'description': 'Its a Draw'};
         }
-        if (rm === 'stone' && mc === 'stone') {
-            return {'result': 'Drawn', 'description': 'Its a Draw'};
+        if (rm === 'Rock' && mc === 'Rock') {
+            return {'result': 'drawn', 'description': 'Its a Draw'};
         }
-        if (rm === 'paper' && mc === 'paper') {
-            return {'result': 'Drawn', 'description': 'Its a Draw'};
+        if (rm === 'Paper' && mc === 'Paper') {
+            return {'result': 'drawn', 'description': 'Its a Draw'};
         }
-        if (rm === 'paper' && mc === 'scisors') {
-            return {'result': 'Won', 'description': 'Scisors cut Paper'};
+        if (rm === 'Paper' && mc === 'Scissors') {
+            return {'result': 'won', 'description': 'Scissors cut Paper'};
         }
-        if (rm === 'scisors' && mc === 'paper') {
-            return {'result': 'Lost', 'description': 'Scisors cut Paper'};
+        if (rm === 'Scissors' && mc === 'Paper') {
+            return {'result': 'lost', 'description': 'Scissors cut Paper'};
         }
     }
     self.setUp = function () {
